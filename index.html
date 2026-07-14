@@ -4,12 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>마케팅인사이드 · 오퍼레이션 보드</title>
-<meta name="description" content="AI 외주 대행사 마케팅인사이드의 실시간 조직·프로젝트 현황 보드">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%23E8447F'/><path d='M28 74 L28 34 L50 56 L72 34 L72 74' fill='none' stroke='%23fff' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/><path d='M50 19 C 50.8 25 51.5 25.7 56 26.5 C 51.5 27.3 50.8 28 50 33 C 49.2 28 48.5 27.3 44 26.5 C 48.5 25.7 49.2 25 50 19 Z' fill='%23fff'/></svg>">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="apple-mobile-web-app-title" content="마케팅인사이드">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">📊</text></svg>'>
 </head>
 <body>
 <style>
@@ -193,7 +189,7 @@
   // ── 회사 상태 (하네스 ai-company / company-dashboard 가 갱신) ──
   // 상태값: wait 대기중 · go 진행중 · review 검수중 · rework 재작업 · done 완료
   const state = {
-    company:"마케팅인사이드", updated:"2026-07-13", founded:"2026-07-13",
+    company:"마케팅인사이드", updated:"2026-07-14", founded:"2026-07-13",
     leadership:[
       {role:"대표", person:"봉남이", name:"ceo", status:"chief", task:"회사 총괄 · 최종 의사결정"},
       {role:"비서", person:"설아", name:"secretary", status:"staff", task:"일정 · 커뮤니케이션 · 문서 관리"}
@@ -212,14 +208,20 @@
     ],
     projects:[
       {
-        name:"블로그 글 자판기 · 수익화", client:"자사 (기존 제품 수익화)", status:"go", progress:75,
+        name:"블로그헬퍼 · 네이버 블로그 자판기", client:"자사 SaaS (수익화)", status:"go", progress:90,
         members:[
-          {person:"하린", role:"접수·기획 (PM)", name:"intake-pm", task:"수익화 범위·요금 확정", status:"done"},
-          {person:"리아", role:"시장 리서처", name:"researcher-market", task:"기존 사이트 감사·요금 설계", status:"done"},
-          {person:"유나", role:"UI 디자이너", name:"designer-ui", task:"랜딩·로그인 화면 완성", status:"done"},
-          {person:"준호", role:"프론트 개발", name:"dev-frontend", task:"랜딩·로그인 게이트 구현", status:"done"},
-          {person:"태오", role:"백엔드 개발", name:"dev-backend", task:"닷홈 배포 완료 · 회원가입 실서버 검증 통과", status:"done"},
-          {person:"세인", role:"품질 검수", name:"qa-inspector", task:"배포 검증(가입·세션·한글) 통과", status:"done"}
+          {person:"하린", role:"접수·기획 (PM)", name:"intake-pm", task:"요금제·기능 범위 확정", status:"done"},
+          {person:"리아", role:"시장 리서처", name:"researcher-market", task:"요금 설계·경쟁 분석", status:"done"},
+          {person:"유나", role:"UI 디자이너", name:"designer-ui", task:"랜딩·마이·관리자 화면", status:"done"},
+          {person:"준호", role:"프론트 개발", name:"dev-frontend", task:"랜딩·앱·SEO·카피 구현", status:"done"},
+          {person:"태오", role:"백엔드 개발", name:"dev-backend", task:"도메인(bloghelper.shop)·네이버로그인·관리자·방문자집계 완료, 결제(PG) 남음", status:"go"},
+          {person:"세인", role:"품질 검수", name:"qa-inspector", task:"배포·기능 실서버 검증 통과", status:"done"}
+        ]
+      },
+      {
+        name:"구글 상위노출", client:"부산고구려", status:"wait", progress:0,
+        members:[
+          {person:"하린", role:"접수·기획 (PM)", name:"intake-pm", task:"의뢰 접수 · 팀 배정 대기 (키워드 '해운대 고구려')", status:"wait"}
         ]
       }
     ],
